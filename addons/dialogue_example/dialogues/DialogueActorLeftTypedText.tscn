@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnyfykjvql5st"]
+
+[ext_resource type="Script" path="res://addons/dialogue_example/dialogues/DialogueActorLeftTypedText.gd" id="3"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("3")
+
+[node name="Texture" type="TextureRect" parent="."]
+layout_mode = 0
+anchor_left = 0.01
+anchor_top = 0.75
+anchor_right = 0.01
+anchor_bottom = 0.75
+offset_top = -150.0
+offset_right = 150.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Reference" type="ReferenceRect" parent="."]
+layout_mode = 0
+anchor_left = 0.01
+anchor_top = 0.75
+anchor_right = 0.01
+anchor_bottom = 0.75
+offset_top = -150.0
+offset_right = 150.0
+border_color = Color(0.996078, 0.996078, 0.992157, 1)
+
+[node name="Name" type="Label" parent="."]
+layout_mode = 0
+anchor_left = 0.01
+anchor_top = 0.75
+anchor_right = 0.99
+anchor_bottom = 0.79
+text = "Name"
+
+[node name="Text" type="Label" parent="."]
+layout_mode = 0
+anchor_left = 0.01
+anchor_top = 0.79
+anchor_right = 0.99
+anchor_bottom = 0.99
+text = "Text"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+anchor_left = 0.01
+anchor_top = 0.95
+anchor_right = 0.99
+anchor_bottom = 0.99
+text = "Button"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.05
+autostart = true

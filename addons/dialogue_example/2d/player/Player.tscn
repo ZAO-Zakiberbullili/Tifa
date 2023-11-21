@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bta50inhb3w0v"]
+
+[ext_resource type="Script" path="res://addons/dialogue_example/2d/player/Player.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://c0h1go0h1famk" path="res://sprites_placeholders/gg_placeholder.png" id="2_dskrx"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(592, 466.131)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("2")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -700)
+limit_smoothed = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5, -233.935)
+shape = SubResource("1")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_dskrx")
+offset = Vector2(0, -220)

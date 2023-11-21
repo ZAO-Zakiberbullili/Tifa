@@ -1,0 +1,2 @@
+SpriteFrames
+TileMapPattern
