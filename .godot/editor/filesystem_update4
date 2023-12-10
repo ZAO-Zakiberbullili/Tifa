@@ -1,3 +1,6 @@
+res://playground.tscn
 res://PlayerMove.gd
 res://tiles_texture.tres
 res://kristo_sprites.tres
+res://addons/dialogue_example/2d/Level1.tscn
+res://addons/dialogue_editor/DialogueDialogue2D.gd

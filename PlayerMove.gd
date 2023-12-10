@@ -3,7 +3,7 @@ extends Node2D
 var input_direction : Vector2
 # var speed = 500
 var speed: float = 0.1
-var tile_size = 4
+var tile_size : int = 4
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -25,7 +25,7 @@ func read_input():
 	# $Sprite2D.position = $Sprite2D.position + input_direction * speed * delta
 	
 	
-func move_topdown(delta):
+func move_topdown(_delta):
 	var moving_direction: Vector2 = Vector2.ZERO
 	
 	if input_direction.length() > 0:
@@ -60,6 +60,3 @@ func move_topdown(delta):
 func _physics_process(delta):
 	read_input()
 	move_topdown(delta)
-	
-func on_Area2D_body_entered(body):
-	print(body.name + " entered the area")

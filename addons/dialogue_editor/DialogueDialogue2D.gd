@@ -25,6 +25,7 @@ func _on_body_entered(body: Node) -> void:
 	inside = true
 	if autostart:
 		_start_dialogue()
+		
 
 func _on_body_exited(body: Node) -> void:
 	inside = false

@@ -1,3 +1,4 @@
+CharacterBody2D
 LightOccluder2D
 RayCast2D
 DirectionalLight2D
