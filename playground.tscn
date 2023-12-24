@@ -1,14 +1,21 @@
-[gd_scene load_steps=14 format=3 uid="uid://nkar0p128nrm"]
+[gd_scene load_steps=17 format=3 uid="uid://nkar0p128nrm"]
 
 [ext_resource type="Script" path="res://PlayerMove.gd" id="1_vmuq1"]
 [ext_resource type="Script" path="res://addons/dialogue_example/2d/Level.gd" id="1_wyu1m"]
+[ext_resource type="Script" path="res://Inventory.gd" id="2_0wrts"]
 [ext_resource type="Texture2D" uid="uid://c8ikygi1qojjo" path="res://point_light.png" id="2_80ae1"]
 [ext_resource type="Texture2D" uid="uid://ccw6e1e33ocax" path="res://tiles_texture.tres" id="2_xt7nc"]
+[ext_resource type="Script" path="res://CustomItemList.gd" id="3_uldx7"]
 [ext_resource type="SpriteFrames" uid="uid://bldfvdm40yuxu" path="res://kristo_sprites.tres" id="4_33jaa"]
 [ext_resource type="Texture2D" uid="uid://btme54cndtmy7" path="res://addons/dialogue_example/textures/FlagRed.png" id="5_xeb52"]
 [ext_resource type="Texture2D" uid="uid://bg8lqfle4al2r" path="res://addons/dialogue_example/textures/FlagYellow.png" id="6_cbat0"]
 [ext_resource type="Script" path="res://addons/dialogue_editor/DialogueDialogue2D.gd" id="7_goyo5"]
 [ext_resource type="Texture2D" uid="uid://bxg1vgp25bgdc" path="res://sprites_placeholders/judge_placeholder.png" id="7_q14vt"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cg71m"]
+line_spacing = 1.0
+font_size = 8
+shadow_size = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m3t4t"]
 resource_name = "normal_tiles"
@@ -208,6 +215,40 @@ size = Vector2(1688.89, 1244.45)
 [node name="Playground" type="Node2D"]
 script = ExtResource("1_wyu1m")
 
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_0wrts")
+
+[node name="ItemList" type="ItemList" parent="Control"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = -74.0
+offset_right = 147.0
+offset_bottom = 70.0
+item_count = 1
+item_0/text = ""
+script = ExtResource("3_uldx7")
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = -137.0
+offset_top = -74.0
+offset_right = -15.0
+offset_bottom = 2.0
+expand_mode = 2
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = -142.0
+offset_top = 30.0
+offset_right = -60.0
+offset_bottom = 44.0
+text = "Default description"
+label_settings = SubResource("LabelSettings_cg71m")
+
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 enabled = false
 energy = 0.2
@@ -276,3 +317,5 @@ dialogue_name = "bbcf8c46-9ea0-486a-8ec9-3b39fa17c891"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Person/Dialogue2D"]
 position = Vector2(-88.8887, -133.334)
 shape = SubResource("RectangleShape2D_qj801")
+
+[connection signal="item_selected" from="Control/ItemList" to="Control" method="_on_item_list_item_selected"]
