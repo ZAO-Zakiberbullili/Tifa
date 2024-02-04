@@ -1,3 +1,7 @@
+StaticBody2D
+CollisionShape2D
+Area2D
+CollisionPolygon2D
 Label
 TextureRect
 ItemList
@@ -8,8 +12,3 @@ RayCast2D
 DirectionalLight2D
 PointLight2D
 RigidBody2D
-StaticBody2D
-Area2D
-CollisionShape2D
-AnimatedSprite2D
-Camera2D

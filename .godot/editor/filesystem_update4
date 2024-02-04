@@ -2,5 +2,3 @@ res://playground.tscn
 res://PlayerMove.gd
 res://tiles_texture.tres
 res://kristo_sprites.tres
-res://Inventory.gd
-res://CustomItemList.gd

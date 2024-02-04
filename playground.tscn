@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://nkar0p128nrm"]
+[gd_scene load_steps=22 format=3 uid="uid://nkar0p128nrm"]
 
 [ext_resource type="Script" path="res://PlayerMove.gd" id="1_vmuq1"]
 [ext_resource type="Script" path="res://addons/dialogue_example/2d/Level.gd" id="1_wyu1m"]
@@ -10,7 +10,12 @@
 [ext_resource type="Texture2D" uid="uid://btme54cndtmy7" path="res://addons/dialogue_example/textures/FlagRed.png" id="5_xeb52"]
 [ext_resource type="Texture2D" uid="uid://bg8lqfle4al2r" path="res://addons/dialogue_example/textures/FlagYellow.png" id="6_cbat0"]
 [ext_resource type="Script" path="res://addons/dialogue_editor/DialogueDialogue2D.gd" id="7_goyo5"]
-[ext_resource type="Texture2D" uid="uid://bxg1vgp25bgdc" path="res://sprites_placeholders/judge_placeholder.png" id="7_q14vt"]
+[ext_resource type="Texture2D" uid="uid://ccdthmc3kxod8" path="res://lay_01.png" id="12_455s0"]
+[ext_resource type="Texture2D" uid="uid://dgj4kxdbemb0e" path="res://lay_05.png" id="13_fsfs3"]
+[ext_resource type="Texture2D" uid="uid://bmobjd31hinhj" path="res://Barman.png" id="13_jdojk"]
+[ext_resource type="Texture2D" uid="uid://ca4a1ynnilbf5" path="res://lay_03.png" id="14_p875k"]
+[ext_resource type="Texture2D" uid="uid://dmm3shyh3hfv1" path="res://lay_04.png" id="15_kuw8c"]
+[ext_resource type="Texture2D" uid="uid://coco4ospmiqbv" path="res://lay_02 (1).png" id="16_1v17u"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_cg71m"]
 line_spacing = 1.0
@@ -206,11 +211,11 @@ tile_size = Vector2i(16, 12)
 physics_layer_0/collision_layer = 1
 sources/5 = SubResource("TileSetAtlasSource_m3t4t")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qj801"]
+size = Vector2(48, 40)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wrg2g"]
 size = Vector2(16, 32)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qj801"]
-size = Vector2(1688.89, 1244.45)
 
 [node name="Playground" type="Node2D"]
 script = ExtResource("1_wyu1m")
@@ -272,23 +277,6 @@ layer_0/tile_data = PackedInt32Array(65535, 327685, 0, 131071, 327685, 1, 0, 393
 layer_1/name = "Objects"
 layer_1/tile_data = PackedInt32Array(131073, 262149, 9, 196609, 262149, 10, 262145, 262149, 11, 131074, 327685, 9, 196610, 327685, 10, 262146, 327685, 11, 327681, 262149, 12, 327682, 327685, 12, 65538, 327685, 8, 65537, 262149, 8)
 
-[node name="Player" type="CharacterBody2D" parent="."]
-script = ExtResource("1_vmuq1")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
-texture_filter = 1
-sprite_frames = ExtResource("4_33jaa")
-animation = &"kristo_idle"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-shape = SubResource("RectangleShape2D_wrg2g")
-debug_color = Color(0, 0.6, 0.701961, 0.419608)
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(6, 6)
-
-[node name="RayCast2D" type="RayCast2D" parent="Player"]
-
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
@@ -305,17 +293,61 @@ position = Vector2(1420, 420)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("6_cbat0")
 
+[node name="Lay01" type="Sprite2D" parent="."]
+position = Vector2(-525, 705)
+texture = ExtResource("12_455s0")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Lay01"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Lay01/StaticBody2D"]
+position = Vector2(-203, 298)
+polygon = PackedVector2Array(-38, 74, -45, 80, -46, 130, -29, 131, -27, 122, 68, 119, 68, 0, 308, -1, 306, -59, 899, -62, 900, -144, 916, -234, 905, -408, 674, -376, 686, -344, 882, -345, 872, -225, 802, -229, 804, -196, 882, -187, 885, -77, 298, -74, 291, -66, 292, -21, 284, -13, 58, -14, 51, -5, 51, 79, 41, 92, -18, 92, -28, 81)
+
+[node name="Lay02(1)" type="Sprite2D" parent="."]
+position = Vector2(-525, 705)
+texture = ExtResource("16_1v17u")
+
+[node name="Lay05" type="Sprite2D" parent="."]
+position = Vector2(-525, 705)
+texture = ExtResource("13_fsfs3")
+
+[node name="Lay04" type="Sprite2D" parent="."]
+position = Vector2(-525, 705)
+texture = ExtResource("15_kuw8c")
+
+[node name="Lay03" type="Sprite2D" parent="."]
+position = Vector2(-525, 705)
+texture = ExtResource("14_p875k")
+
 [node name="Person" type="Sprite2D" parent="."]
-position = Vector2(-120, -36)
-scale = Vector2(0.045, 0.045)
-texture = ExtResource("7_q14vt")
+position = Vector2(-500, 900)
+texture = ExtResource("13_jdojk")
 
 [node name="Dialogue2D" type="Area2D" parent="Person"]
 script = ExtResource("7_goyo5")
 dialogue_name = "bbcf8c46-9ea0-486a-8ec9-3b39fa17c891"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Person/Dialogue2D"]
-position = Vector2(-88.8887, -133.334)
+position = Vector2(-3, -1)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_qj801")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(-700, 1000)
+script = ExtResource("1_vmuq1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+texture_filter = 1
+sprite_frames = ExtResource("4_33jaa")
+animation = &"kristo_idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("RectangleShape2D_wrg2g")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(6, 6)
+
+[node name="RayCast2D" type="RayCast2D" parent="Player"]
 
 [connection signal="item_selected" from="Control/ItemList" to="Control" method="_on_item_list_item_selected"]
