@@ -2,3 +2,5 @@ res://playground.tscn
 res://PlayerMove.gd
 res://tiles_texture.tres
 res://kristo_sprites.tres
+res://MainMenu.tscn
+res://MainMenu.gd

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Tifa"
-run/main_scene="res://playground.tscn"
+run/main_scene="res://MainMenu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 

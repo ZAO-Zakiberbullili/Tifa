@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://nkar0p128nrm"]
+[gd_scene load_steps=23 format=3 uid="uid://nkar0p128nrm"]
 
 [ext_resource type="Script" path="res://PlayerMove.gd" id="1_vmuq1"]
 [ext_resource type="Script" path="res://addons/dialogue_example/2d/Level.gd" id="1_wyu1m"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://ca4a1ynnilbf5" path="res://lay_03.png" id="14_p875k"]
 [ext_resource type="Texture2D" uid="uid://dmm3shyh3hfv1" path="res://lay_04.png" id="15_kuw8c"]
 [ext_resource type="Texture2D" uid="uid://coco4ospmiqbv" path="res://lay_02 (1).png" id="16_1v17u"]
+[ext_resource type="AudioStream" uid="uid://dvb44rels6eq2" path="res://Interlude_for_TIfa.wav" id="17_vdnc6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_cg71m"]
 line_spacing = 1.0
@@ -329,7 +330,6 @@ dialogue_name = "bbcf8c46-9ea0-486a-8ec9-3b39fa17c891"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Person/Dialogue2D"]
 position = Vector2(-3, -1)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_qj801")
 
 [node name="Player" type="CharacterBody2D" parent="."]
@@ -349,5 +349,9 @@ debug_color = Color(0, 0.6, 0.701961, 0.419608)
 zoom = Vector2(6, 6)
 
 [node name="RayCast2D" type="RayCast2D" parent="Player"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("17_vdnc6")
+autoplay = true
 
 [connection signal="item_selected" from="Control/ItemList" to="Control" method="_on_item_list_item_selected"]

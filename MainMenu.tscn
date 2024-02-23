@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1jhrggfkguic"]
+
+[ext_resource type="Script" path="res://MainMenu.gd" id="1_al0e8"]
+[ext_resource type="AudioStream" uid="uid://dvb44rels6eq2" path="res://Interlude_for_TIfa.wav" id="2_oq7y1"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_al0e8")
+
+[node name="New Game" type="Button" parent="."]
+offset_left = 787.0
+offset_top = 361.0
+offset_right = 880.0
+offset_bottom = 392.0
+text = "New Game"
+
+[node name="Settings" type="Button" parent="."]
+offset_left = 801.0
+offset_top = 411.0
+offset_right = 871.0
+offset_bottom = 442.0
+text = "Settings"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 813.0
+offset_top = 460.0
+offset_right = 855.0
+offset_bottom = 491.0
+text = "Quit"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_oq7y1")
+autoplay = true

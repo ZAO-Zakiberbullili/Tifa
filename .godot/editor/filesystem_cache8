@@ -1,15 +1,16 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1707069385
+::res://::1708716742
 Barman.png::CompressedTexture2D::3257665087059816219::1707069385::1707069386::1::::<><>::
 base_loc.png::CompressedTexture2D::7117387794111282515::1696699427::1696699428::1::::<><>::
 base_loc_normal.png::CompressedTexture2D::2730973180701481220::1696699427::1696699428::1::::<><>::
 CustomItemList.gd::GDScript::-1::1703436646::0::1::::<>ItemList<>::
 export_presets.cfg::TextFile::-1::1702231956::0::1::::<><>::
 icon.svg::CompressedTexture2D::8760384974237303637::1695203640::1695203646::1::::<><>::
+Interlude_for_TIfa.wav::AudioStreamWAV::8637105625646749891::1708716742::1708716742::1::::<><>::
 Inventory.gd::GDScript::-1::1703438095::0::1::::<>Control<>::
 inventory_image_default_texture.png::CompressedTexture2D::8800991785484987186::1703435100::1703435101::1::::<><>::
 Kristo_Move_Animations.png::CompressedTexture2D::1202486235048646126::1698319614::1698319614::1::::<><>::
-kristo_sprites.tres::SpriteFrames::3165032361069178082::1707068430::0::1::::<><>::uid://req1jeq7yu0m::::res://Kristo_Move_Animations.png
+kristo_sprites.tres::SpriteFrames::3165032361069178082::1708716364::0::1::::<><>::uid://req1jeq7yu0m::::res://Kristo_Move_Animations.png
 lay_01.png::CompressedTexture2D::4920578946000629399::1705256923::1705256923::1::::<><>::
 lay_01_normal.png::CompressedTexture2D::882438828902960671::1706465168::1706465168::1::::<><>::
 lay_02 (1).png::CompressedTexture2D::5760516523580029399::1705257309::1705257309::1::::<><>::
@@ -20,12 +21,12 @@ lay_04.png::CompressedTexture2D::8028033332966662224::1705256923::1705256923::1:
 lay_05.png::CompressedTexture2D::7600754376146032858::1705257309::1705257309::1::::<><>::
 Lucius_3d_alpha.png::CompressedTexture2D::5985519822252029705::1700549962::1700549962::1::::<><>::
 player.tscn::PackedScene::718542138947376649::1696698593::0::1::::<><>::res://scripts/player.gd
-PlayerMove.gd::GDScript::-1::1707068430::0::1::::<>Node2D<>::
-playground.tscn::PackedScene::933130440805936570::1707069217::0::1::::<><>::res://PlayerMove.gd<>res://addons/dialogue_example/2d/Level.gd<>res://Inventory.gd<>uid://c8ikygi1qojjo::::res://point_light.png<>uid://ccw6e1e33ocax::::res://tiles_texture.tres<>res://CustomItemList.gd<>uid://bldfvdm40yuxu::::res://kristo_sprites.tres<>uid://btme54cndtmy7::::res://addons/dialogue_example/textures/FlagRed.png<>uid://bg8lqfle4al2r::::res://addons/dialogue_example/textures/FlagYellow.png<>res://addons/dialogue_editor/DialogueDialogue2D.gd<>uid://bxg1vgp25bgdc::::res://sprites_placeholders/judge_placeholder.png<>uid://ccdthmc3kxod8::::res://lay_01.png<>uid://dgj4kxdbemb0e::::res://lay_05.png<>uid://ca4a1ynnilbf5::::res://lay_03.png<>uid://dmm3shyh3hfv1::::res://lay_04.png<>uid://coco4ospmiqbv::::res://lay_02 (1).png
+PlayerMove.gd::GDScript::-1::1708716364::0::1::::<>Node2D<>::
+playground.tscn::PackedScene::933130440805936570::1708716401::0::1::::<><>::res://PlayerMove.gd<>res://addons/dialogue_example/2d/Level.gd<>res://Inventory.gd<>uid://c8ikygi1qojjo::::res://point_light.png<>uid://ccw6e1e33ocax::::res://tiles_texture.tres<>res://CustomItemList.gd<>uid://bldfvdm40yuxu::::res://kristo_sprites.tres<>uid://btme54cndtmy7::::res://addons/dialogue_example/textures/FlagRed.png<>uid://bg8lqfle4al2r::::res://addons/dialogue_example/textures/FlagYellow.png<>res://addons/dialogue_editor/DialogueDialogue2D.gd<>uid://ccdthmc3kxod8::::res://lay_01.png<>uid://dgj4kxdbemb0e::::res://lay_05.png<>uid://bmobjd31hinhj::::res://Barman.png<>uid://ca4a1ynnilbf5::::res://lay_03.png<>uid://dmm3shyh3hfv1::::res://lay_04.png<>uid://coco4ospmiqbv::::res://lay_02 (1).png<>uid://bmudlf30n3052::::res://Interlude_for_TIfa.mp3
 point_light.png::CompressedTexture2D::7106238587156930708::1700550871::1700550872::1::::<><>::
 tiles.png::CompressedTexture2D::9055204963011073096::1696699406::1696699384::1::::<><>::
 tiles_normal.png::CompressedTexture2D::4378924641767815455::1696699428::1696699428::1::::<><>::
-tiles_texture.tres::CanvasTexture::4960526108299445199::1707068430::0::1::::<><>::uid://d2an5xubcnuy7::::res://tiles.png<>uid://b3ngip646yfwp::::res://tiles_normal.png
+tiles_texture.tres::CanvasTexture::4960526108299445199::1708716364::0::1::::<><>::uid://d2an5xubcnuy7::::res://tiles.png<>uid://b3ngip646yfwp::::res://tiles_normal.png
 ::res://addons/::1698391715
 ::res://addons/dialogue_editor/::1702211107
 DialogueDialogue2D.gd::GDScript::-1::1702211107::0::1::::Dialogue2D<>Area2D<>::

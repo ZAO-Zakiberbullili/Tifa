@@ -1,3 +1,6 @@
+MarginContainer
+Button
+AudioStreamPlayer2D
 StaticBody2D
 CollisionShape2D
 Area2D
@@ -10,5 +13,3 @@ CharacterBody2D
 LightOccluder2D
 RayCast2D
 DirectionalLight2D
-PointLight2D
-RigidBody2D
